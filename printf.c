@@ -33,6 +33,18 @@ int no_struct(char c, int count, va_list argu)
 			}
 			else
 				count += _putstring(s);
+
+			break;
+		case 'i':
+		case 'd':
+			j = va_arg(argu, int);
+			if (!j)
+			{
+				count++;
+				_putchar('0');
+			}
+			else
+				count += print_number(j);
 			break;
 		case '%':
 			count += _putchar('%');
