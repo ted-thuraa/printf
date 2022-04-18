@@ -18,6 +18,7 @@ int _printf(const char *format, ...)
 	char c, out, *s;
 
 	va_list ap;
+
 	va_start(ap, format);
 
 	while (*format)
@@ -30,7 +31,10 @@ int _printf(const char *format, ...)
 				break;
 			case 'c':
 				c = (char) va_arg(ap, int);
-				out = (write (STDOUT, &c, 1));
+				out = (write(STDOUT, &c, 1));
+				break;
+			case '%':
+				out = ('%');
 				break;
 		}
 	}
