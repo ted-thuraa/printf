@@ -1,0 +1,1 @@
+printf<br /> Created our own printf function. The function should produce an output according to a specified format. The output should be similar to the real printf. There are many formats and features not implemented yet. If conversion specifiers are passed in, use appropriate function.
